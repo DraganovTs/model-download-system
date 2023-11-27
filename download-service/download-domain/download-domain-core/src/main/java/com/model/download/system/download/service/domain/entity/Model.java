@@ -18,6 +18,10 @@ public class Model extends BaseEntity<ModelId> {
         this.price = price;
     }
 
+    public Model(ModelId modelId){
+        super.setId(modelId);
+    }
+
     public void updateWithConfirmedNameAndPrice(String name, String zipFile,
                                                 String imageFile, Money price) {
         this.name = name;

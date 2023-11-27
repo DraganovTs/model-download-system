@@ -8,7 +8,7 @@ import com.model.download.system.download.service.domain.event.DownloadPaidEvent
 
 import java.util.List;
 
-public interface ModelDomainService {
+public interface DownloadDomainService {
 
     DownloadCreatedEvent validateAndInitiateDownload(Download download, Category category);
 
