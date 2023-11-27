@@ -10,12 +10,21 @@ public class Model extends BaseEntity<ModelId> {
     private String imageFile;
     private Money price;
 
-    public Model(ModelId modelId,String name, String zipFile, String imageFile, Money price) {
+    public Model(ModelId modelId, String name, String zipFile, String imageFile, Money price) {
         super.setId(modelId);
         this.name = name;
         this.zipFile = zipFile;
         this.imageFile = imageFile;
         this.price = price;
+    }
+
+    public void updateWithConfirmedNameAndPrice(String name, String zipFile,
+                                                String imageFile, Money price) {
+        this.name = name;
+        this.imageFile = imageFile;
+        this.zipFile = zipFile;
+        this.price = price;
+
     }
 
     public String getName() {
