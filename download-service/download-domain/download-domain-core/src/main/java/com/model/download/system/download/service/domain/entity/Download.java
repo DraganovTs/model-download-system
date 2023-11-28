@@ -93,7 +93,7 @@ public class Download extends AggregateRoot<DownloadId> {
     }
 
     private void validateTotalPrice() {
-        if (price == null || price.isGreaterThanZero()) {
+        if (price == null || !price.isGreaterThanZero()) {
             throw new DownloadDomainException("Total price must be greater than zero!");
         }
     }

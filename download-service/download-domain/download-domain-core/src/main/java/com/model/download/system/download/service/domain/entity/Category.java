@@ -29,7 +29,7 @@ public class Category extends AggregateRoot<CategoryId> {
         private List<Model> models;
         private boolean active;
 
-        private Builder() {
+        public Builder() {
         }
 
         public static Builder builder() {

@@ -38,10 +38,11 @@ public class DownloadDataMapper {
 
     }
 
-    public CreateDownloadResponse downloadToCreateDownloadResponse(Download download) {
+    public CreateDownloadResponse downloadToCreateDownloadResponse(Download download , String message) {
         return CreateDownloadResponse.builder()
                 .downloadTrackingId(download.getTrackingId().getValue())
                 .downloadStatus(download.getDownloadStatus())
+                .message(message)
                 .build();
     }
 

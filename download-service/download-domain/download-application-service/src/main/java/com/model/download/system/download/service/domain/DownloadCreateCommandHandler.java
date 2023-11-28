@@ -33,7 +33,7 @@ public class DownloadCreateCommandHandler {
         DownloadCreatedEvent downloadCreatedEvent = downloadCreateHelper.persistDownload(createDownloadCommand);
         log.info("Download is created whit id: {}" ,downloadCreatedEvent.getDownload().getId().getValue());
         downloadCreatedPaymentRequestMessagePublisher.publish(downloadCreatedEvent);
-        return downloadDataMapper.downloadToCreateDownloadResponse(downloadCreatedEvent.getDownload());
+        return downloadDataMapper.downloadToCreateDownloadResponse(downloadCreatedEvent.getDownload(), "Download Created Successfully");
     }
 
 
