@@ -11,6 +11,7 @@
         <module name="download-dataaccess" />
         <module name="download-container" />
         <module name="download-application-service" />
+        <module name="infrastructure" />
         <module name="common-domain" />
         <module name="download-messaging" />
       </profile>
@@ -28,6 +29,7 @@
       <module name="download-domain-core" options="-parameters" />
       <module name="download-messaging" options="-parameters" />
       <module name="download-service" options="" />
+      <module name="infrastructure" options="-parameters" />
       <module name="model-download-system" options="" />
     </option>
   </component>
