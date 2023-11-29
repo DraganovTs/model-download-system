@@ -1,0 +1,73 @@
+{
+    "namespace": "com.model.download.system.kafka.download.avro.model",
+    "type": "record",
+    "name": "CategoryApprovalAvroModel",
+    "fields": [
+        {
+            "name": "id",
+            "type": {
+                "type": "string",
+                "logicalType": "uuid"
+            }
+        },
+        {
+            "name": "sagaId",
+            "type": {
+                "type": "string",
+                "logicalType": "uuid"
+            }
+        },
+        {
+            "name": "categoryId",
+            "type": {
+                "type": "string",
+                "logicalType": "uuid"
+            }
+        },
+        {
+            "name": "downloadId",
+            "type": {
+                "type": "string",
+                "logicalType": "uuid"
+            }
+        },
+        {
+            "name": "downloadApprovalStatus",
+            "type": {
+                  "type": "enum",
+                  "name": "DownloadApprovalStatus",
+                  "symbols": ["PAID"]
+            }
+        },
+        {
+            "name": "models",
+            "type": {
+                "type": "array",
+                "items":{
+                  "name":"Model",
+                  "type":"record",
+                  "fields":[
+                    {"name":"id", "type": "string", "logicalType": "uuid"},
+                    {"name":"quantity", "type": "int"}
+                   ]
+               }
+            }
+        },
+        {
+            "name": "price",
+            "type": {
+                "type": "bytes",
+                "logicalType": "decimal",
+                "precision": 10,
+                "scale": 2
+            }
+        },
+        {
+            "name": "createdAt",
+            "type": {
+                "type": "long",
+                "logicalType": "timestamp-millis"
+            }
+        }
+    ]
+}
