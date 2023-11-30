@@ -7,6 +7,8 @@
         <module>download-service</module>
         <module>common</module>
         <module>infrastructure</module>
+        <module>category-service</module>
+        <module>payment-service</module>
     </modules>
 
     <parent>
